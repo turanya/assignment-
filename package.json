@@ -1,0 +1,15 @@
+{
+  "name": "mgnrega-dashboard",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm:dev --workspace backend\" \"npm:dev --workspace frontend\"",
+    "start": "concurrently -n backend,frontend -c blue,green \"npm:start --workspace backend\" \"npm:start --workspace frontend\""
+  }
+}
