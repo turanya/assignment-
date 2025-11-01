@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GT Walsheim - Regular */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('/font/gt-walsheim-font-family-1761814374-0/GT-Walsheim-Regular-Trial-BF651b7fc71a47d.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* GT Walsheim - Medium */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('/font/gt-walsheim-font-family-1761814374-0/GT-Walsheim-Medium-Trial-BF651b7fc728fb3.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* GT Walsheim - Bold */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('/font/gt-walsheim-font-family-1761814374-0/GT-Walsheim-Bold-Trial-BF651b7fc737c57.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Noto Sans Devanagari - Variable Font */
+@font-face {
+  font-family: 'Noto Sans Devanagari';
+  src: url('/font/noto-sans-devanagari/NotoSansDevanagari[wdth,wght].ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-sans: 'GT Walsheim', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  --font-devanagari: 'Noto Sans Devanagari', 'GT Walsheim', system-ui, -apple-system, sans-serif;
+  color-scheme: light;
+}
+
+html, body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
+/* Apply Devanagari font to elements with lang="hi" or similar */
+[lang^="hi"], [lang^="mr"], [lang^="ne"] {
+  font-family: var(--font-devanagari);
+}
+
+body { 
+  background-color: #e6edf8; 
+}
